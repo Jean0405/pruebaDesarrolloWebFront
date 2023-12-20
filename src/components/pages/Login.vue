@@ -22,7 +22,7 @@
                 </div>
                 <button class="bg-sky-500 text-white font-bold rounded shadow-lg p-2.5" type="submit">Iniciar
                     sesión</button>
-                <p>Don't have an account? <span class="text-sky-600 italic font-bold cursor-pointer"
+                <p>No tienes una cuenta? <span class="text-sky-600 italic font-bold cursor-pointer"
                         @click="$router.push('/register')">Registrarse</span></p>
             </form>
         </div>
