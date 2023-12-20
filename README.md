@@ -1,7 +1,48 @@
-# Vue 3 + Vite
+# PRUEBA DESARROLLO WEB
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Prueba Frontend con VUE
 
-## Recommended IDE Setup
+Esta parte de la prueba consta de la realización de vistas para un sistema de registro de historias en una entidad medica llamada **_SALUD DOMICILIARIA ACANCES SAS_**, el cual posee 2 tipos de usuarios:
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Profesionales
+- Pacientes
+
+Los usuarios podrán iniciar sesión o registrarse y una vez dentro estos tendrán distintas funcionalidades.
+
+> [!NOTE]
+> Si es primera vez que el usuario inicia sesión, el programa lo redirigirá a una vista en la cual deberá actualizar su contraseña
+
+### PROFESIONALES
+
+- Listar las historias clinicas que hayan creado
+- Crear nuevas historias clinicas
+- Actualizar datos de su perfil
+
+### PACIENTES
+
+- Listar historias que se les asignaron
+- Marcar como asistida la historia
+- Actualizar datos de su perfil
+
+## INSTALACIÓN
+
+> [!IMPORTANT]
+> Las funcionalidades de este programa no funcionaran si no tienes en ejecución el [proyecto Backend](https://github.com/Jean0405/pruebaDesarrolloWeb) con Laravel.
+
+1. Clona este repositorio
+
+```bash
+git clone https://github.com/Jean0405/pruebaDesarrolloWebFront.git
+```
+
+2. Accede al archivo raiz del proyecto e instala las dependencias
+
+```bash
+npm install
+```
+
+3. Finalmente ejecuta el programa.
+
+```bash
+npm run dev
+```
