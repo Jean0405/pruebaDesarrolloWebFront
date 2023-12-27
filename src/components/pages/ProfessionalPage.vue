@@ -6,7 +6,10 @@
     <nav class="flex justify-between w-full bg-white p-3">
       <img class="w-20" src="https://d2sbaogcozkhdh.cloudfront.net/assets/prod/uploads/avances-software-s-a-s" alt="">
       <div class="flex gap-2">
-        <button @click="logout" class="bg-red-500 text-white font-bold px-3 py-1 rounded">
+        <button @click="updateProfile" class="text-black font-bold px-3 py-1 rounded">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+        <button @click="logout" class="text-black font-bold px-3 py-1 rounded">
           <i class="fa-solid fa-right-from-bracket"></i>
         </button>
       </div>
@@ -112,6 +115,12 @@ export default {
     logout() {
       this.$router.push('/');
     },
+    updateProfile() {
+      this.$router.push({
+        path: '/updateProfile',
+        query: { user: JSON.stringify(this.user) }
+      });
+    },
 
     // FETCH METHODS
     async getUserHistories() {
@@ -133,21 +142,15 @@ export default {
         },
         body: JSON.stringify(this.newHistory)
       });
-      console.log(response);
-      console.log(this.newHistory);
       this.showCreateForm = false;
       this.getUserHistories();
     },
 
-    // Método para mostrar/ocultar el formulario de creación
     toggleCreateForm() {
       this.showCreateForm = !this.showCreateForm;
     },
 
-
-    // Método para cancelar la creación de una nueva historia
     cancelCreateForm() {
-      // Puedes realizar acciones de limpieza o simplemente cerrar el formulario
       this.showCreateForm = false;
     }
   }

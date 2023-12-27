@@ -26,8 +26,6 @@
             placeholder="Nueva contraseña">
         </div>
         <button class="bg-sky-500 text-white font-bold rounded shadow-lg p-2.5 mt-1" type="submit">Actualizar</button>
-        <button class="bg-gray-500 text-center text-white font-bold rounded italic p-1.5"
-          @click="$router.push('/updatePassword')">Cambiar contraseña</button>
       </form>
     </div>
     <svg class="absolute bottom-0 -z-30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

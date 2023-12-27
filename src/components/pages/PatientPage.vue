@@ -51,7 +51,7 @@
 <script>
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
-import UpdateProfile from './updateProfile.vue';
+
 export default {
 
   data() {
@@ -101,7 +101,7 @@ export default {
 
     async acceptHistory(historyId) {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/user/${this.user.identification_number}/histories/${historyId}/accept`, {
+        await fetch(`http://127.0.0.1:8000/api/user/${this.user.identification_number}/histories/${historyId}/accept`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
